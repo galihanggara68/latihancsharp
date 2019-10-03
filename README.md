@@ -1,2 +1,2 @@
 # Coding Is An Art
-## Future is on your finger
+## Future is on your fingers
