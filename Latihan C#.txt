@@ -1,0 +1,21 @@
+- Buatlah program kalkulator sederhana, bisa melakukan operasi perhitungan aritmatika(+, -, /, *, %).
+
+- Buatlah program pendeteksi kata yang mengandung palindrome.
+
+# program ada
+> palindrome
+
+# program satu
+> bukan palindrome
+
+- Buatlah program untuk menghitung BMI(Body Mass Index) atau berat badan ideal.
+
+# bmi 57 160
+> BMI 23.3 -> Normal
+
+# bmi 80 170
+> BMI 27.7 -> Overweight
+
+- Buatlah game sederhana, ada dua buah player yang menginputkan angka bebas dari 1-9, angka yang diinputkan kedua player akan dijumlahkan, yang kalah adalah player yang mendapat jumlah ganjil.
+
+- Buatlah pr
