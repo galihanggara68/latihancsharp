@@ -17,5 +17,3 @@
 > BMI 27.7 -> Overweight
 
 - Buatlah game sederhana, ada dua buah player yang menginputkan angka bebas dari 1-9, angka yang diinputkan kedua player akan dijumlahkan, yang kalah adalah player yang mendapat jumlah ganjil.
-
-- Buatlah pr

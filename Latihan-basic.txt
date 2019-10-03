@@ -1,0 +1,73 @@
+- Buatlah program untuk mencetak segitiga siku-siku
+
+- Kembangkanlah program di atas sehingga ukuran dari segitiga bisa dinamis(input)
+
+- Kembangkanlah program di atas sehingga orientasi dari segitiga bisa dirubah
+
+# program 5 1
+
+*
+**
+***
+****
+*****
+
+# program 5 2
+
+    *
+   **
+  ***
+ ****
+*****
+
+# program 5 3
+
+*****
+****
+***
+**
+*
+
+# program 5 4
+
+*****
+ ****
+  ***
+   **
+    *
+
+- Kembangkanlah program di atas sehingga bisa mencetak karakter berbeda
+
+# program 5 1 @
+
+@
+@@
+@@@
+@@@@
+@@@@@
+
+# program 5 1 $
+
+$
+$$
+$$$
+$$$$
+$$$$$
+
+- Kembangkanlah program di atas sehingga bisa mencetak space kosong dari segitiga
+
+# program 5 1 # @
+
+#@@@@
+##@@@
+###@@
+####@
+#####
+
+# program 5 1 % !
+
+%!!!!
+%%!!!
+%%%!!
+%%%%!
+%%%%%
