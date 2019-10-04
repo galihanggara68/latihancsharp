@@ -1,0 +1,41 @@
+- Buatlah program untuk menyimpan data satu pegawai dengan data sebagai berikut :
+	* NIP
+	* Nama
+	* Alamat
+	* Jabatan
+Note: Gunakanlah Class, output dari program di atas adalah data pegawai yang diinputkan.
+	
+- Kembangkanlah program di atas sehingga data pegawai di atas bisa ditampilkan serta dirubah jika ada data yang salah. Data pegawai masih tetap tersimpan selama data pegawai tidak diupdate. Data akan hilang jika program ditutup.
+
+Note : Gunakanlah looping agar program tidak langsung tertutup.
+
+- Kembangkanlah program di atas sehingga memiliki tampilan menu console (CLI(Command Line Interface)), misal :
+
+	==Menu==
+	1> Tampilkan Data Pegawai
+	2> Update Data Pegawai
+	3> Keluar
+	
+- Kembangkanlah program di atas sehingga program tidak hanya dapat menyimpan satu data pegawai saja, namun dapat menyimpan lebih dari pada satu pegawai.
+
+- Kembangkanlah program di atas sehingga data pegawai dapat dirubah berdasarkan NIP yang diinputkan.
+
+	==Menu==
+	1> Tampilkan Data Pegawai
+	2> Tambah Pegawai
+	3> Update Data Pegawai
+	4> Keluar
+	>> 3
+	
+	NIP | Nama 	| Alamat 	| Jabatan
+	------------------------------------
+	101	| Galih	| Tangerang	| IT Support
+	102	| Angga	| Jakarta	| IT Head
+	
+	Masukan NIP : 101
+	Nama Baru : Galih Anggara
+	Alamat Baru : Kab. Tangerang
+	Jabatan Baru : IT Support Staff
+	==Data Berhasil Dirubah==
+	
+- Kembangkanlah program di atas sehingga bisa menghapus data pegawai
