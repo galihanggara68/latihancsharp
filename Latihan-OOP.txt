@@ -39,3 +39,15 @@ Note : Gunakanlah looping agar program tidak langsung tertutup.
 	==Data Berhasil Dirubah==
 	
 - Kembangkanlah program di atas sehingga bisa menghapus data pegawai
+
+===
+
+- Buatlah sebuah program yang dapat mengkonversi suhu(C ke F, C ke R, C ke K), hasil dari konversi tersebut direturn sehingga bisa dicetak.
+
+- Buatlah sebuah program pengatur suhu tempat penyimpanan daging. Suhu aman yang harus dijaga adalah antara 36°F - 39°F. Jika suhu tempat penyimpanan tersebut tidak diantara batas suhu di atas maka, program akan otomatis menaikan temperaturnya sampai batas aman yang sudah ditentukan dalam satuan °F.
+
+	Input(°C) : 1
+	Suhu Dinaikan Sebesar 1.8°F
+
+	Input(°C) : 7
+	Suhu Diturunkan Sebesar 5.4°F
