@@ -5,34 +5,33 @@ using System.Threading;
 
 namespace FirstCSharp
 {
-    //class Person
-    //{
-    //    private string name;
-    //    private string address;
+    class Person
+    {
+        private string name;
+        private string address;
 
-    //    // Auto-Implement Properties
-    //    public string Name
-    //    {
-    //        get { return this.name; }
-    //        set { this.name = value; }
+        // Auto-Implement Properties
+        public string Name
+        {
+            get { return this.name; }
+            set { this.name = value; }
     //    }
 
-    //    public string Address
-    //    {
-    //        get { return this.address; }
-    //        set { this.address = value; }
-    //    }
+        public string Address
+        {
+            get { return this.address; }
+            set { this.address = value; }
+        }
+        public void Walk()
+        {
+            Console.WriteLine("Walk . . .");
+        }
 
-    //    public void Walk()
-    //    {
-    //        Console.WriteLine("Walk . . .");
-    //    }
-
-    //    public void Eat(string food)
-    //    {
-    //        Console.WriteLine("Eating {0}", food);
-    //    }
-    //}
+        public void Eat(string food)
+        {
+            Console.WriteLine("Eating {0}", food);
+        }
+    }
 
     class Calculator
     {
