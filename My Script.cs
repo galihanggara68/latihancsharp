@@ -590,6 +590,83 @@ namespace FirstCSharp
         }
     }
 
+    interface IKelas
+    {
+        void Fasilitas();
+        string GetName();
+    }
+
+    class Ekonomi : IKelas
+    {
+        public void Fasilitas()
+        {
+            Console.WriteLine("Kamar Mandi Jongkok, Bangku 4");
+        }
+
+        public string GetName()
+        {
+            return "Ekonomi";
+        }
+    }
+
+    class Eksekutif : IKelas
+    {
+        public void Fasilitas()
+        {
+            Console.WriteLine("Meja, Bangku 2 bisa diatur");
+        }
+
+        public string GetName()
+        {
+            return "Eksekutif";
+        }
+    }
+
+    class Bisnis : IKelas
+    {
+        public void Fasilitas()
+        {
+            Console.WriteLine("Bantal, Meja, Bangku 2 tidak bisa diatur");
+        }
+        public string GetName()
+        {
+            return "Bisnis";
+        }
+    }
+
+
+    class Tiket
+    {
+        private string noTiket;
+        private string nama;
+        private string keberangkatan;
+        private string tujuan;
+        private IKelas kelas;
+
+        public string NoTiket { get => noTiket; set => noTiket = value; }
+        public string Nama { get => nama; set => nama = value; }
+        public string Keberangkatan { get => keberangkatan; set => keberangkatan = value; }
+        public string Tujuan { get => tujuan; set => tujuan = value; }
+        public IKelas Kelas { get => kelas; set => kelas = value; }
+    }
+
+    class SistemTiket
+    {
+        private List<Tiket> tikets;
+
+        public List<Tiket> TransactionHistory { get => tikets; set => tikets = value; }
+
+        public SistemTiket()
+        {
+            tikets = new List<Tiket>();
+        }
+
+        public void Transaction(Tiket tiket)
+        {
+            this.tikets.Add(tiket);
+        } 
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -655,14 +732,53 @@ namespace FirstCSharp
             //    }
             }
 
-            IEnemy enemy = new Zombie();
-            enemy.Attack(); // Zombie Attacks
-
-            enemy = new Ghost();
-            enemy.Attack(); // Ghost Attack
-
-            Enemy e = new Zombie();
-            e.Guard();
+            SistemTiket st = new SistemTiket();
+            int ch;
+            do
+            {
+                Console.Write("\n===Menu===\n1> Beli Tiket\n2> Daftar Riwayat\n3> Keluar\n>> ");
+                ch = int.Parse(Console.ReadLine());
+                switch(ch)
+                {
+                    case 1:
+                        Tiket tiket = new Tiket();
+                        tiket.NoTiket = "T00" + (st.TransactionHistory.Count + 1);
+                        Console.Write("Nama : ");
+                        tiket.Nama = Console.ReadLine();
+                        Console.Write("Keberangkatan : ");
+                        tiket.Keberangkatan = Console.ReadLine();
+                        Console.Write("Tujuan : ");
+                        tiket.Tujuan = Console.ReadLine();
+                        Console.Write("Kelas (1. Ekonomi, 2. Eksekutif, 3. Bisnis): ");
+                        int kelas = int.Parse(Console.ReadLine()); // 1. Ekonomi 2. Eksekutif 3. Bisnis
+                        if(kelas == 1)
+                        {
+                            tiket.Kelas = new Ekonomi();
+                        }else if(kelas == 2)
+                        {
+                            tiket.Kelas = new Eksekutif();
+                        }
+                        else if(kelas == 3)
+                        {
+                            tiket.Kelas = new Bisnis();
+                        }
+                        else
+                        {
+                            tiket.Kelas = new Ekonomi();
+                        }
+                        st.Transaction(tiket);
+                        break;
+                    case 2:
+                        Console.WriteLine("No. Tiket\t|\tNama\t|\tKeberangkatan\t|\tTujuan\t|\tKelas");
+                        foreach(Tiket history in st.TransactionHistory)
+                        {
+                            Console.WriteLine("{0}\t\t|\t{1}\t|\t{2}\t|\t{3}\t|\t{4}", history.NoTiket, history.Nama, history.Keberangkatan, history.Tujuan, history.Kelas.GetName());   
+                        }
+                        Console.ReadKey();
+                        break;
+                }
+                Console.Clear();
+            } while(ch != 3);
 
 
             Console.ReadKey();
