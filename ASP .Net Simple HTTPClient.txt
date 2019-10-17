@@ -1,0 +1,16 @@
+[Route("json")]
+        public ActionResult GetJson()
+        {
+            using(HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://kodepos-2d475.firebaseio.com/");
+                var req = client.GetAsync("list_kotakab/p12.json?print=pretty");
+                req.Wait();
+
+                var result = req.Result.Content.ReadAsStringAsync();
+                result.Wait();
+
+                
+                return Content(result.Result);
+            }
+        }
