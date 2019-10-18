@@ -8,7 +8,6 @@ using System.Web.Mvc;
 
 namespace Web_MVC.Controllers
 {
-
     public class RumahController : Controller
     {
         [Route("rumah")] // localhost/rumah
@@ -80,6 +79,30 @@ namespace Web_MVC.Controllers
                 
                 return Content(result.Result);
             }
+        }
+
+        [HttpGet]
+        [Route("show")]
+        public ActionResult ShowPage()
+        {
+            ViewData["pesan"] = "Ayam";
+            ViewData["angka"] = 100;
+
+            string[] namas = { "Galih", "Anggara", "Udin" };
+            ViewData["lists"] = namas;
+
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic.Add("nama", "Galih");
+            dic.Add("alamat", "Tangerang");
+            ViewData["record"] = dic;
+            return View();
+        }
+
+        [HttpPost]
+        [Route("postdata")]
+        public ActionResult PostData(string data)
+        {
+            return Content("<h3>Data Received : " + data + "</h3>");
         }
     }
 }
